@@ -298,12 +298,12 @@
 
     <TextView
         android:id="@+id/input"
-        android:layout_width="377dp"
-        android:layout_height="113dp"
-        android:gravity="right"
+        android:layout_width="360dp"
+        android:layout_height="95dp"
         android:background="@color/myColor"
+        android:gravity="right"
         android:textColor="@color/myWhite"
-        android:textSize="36sp"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
@@ -315,11 +315,11 @@
         android:id="@+id/gongshi"
         android:layout_width="371dp"
         android:layout_height="115dp"
+        android:background="@color/myColor"
         android:gravity="right"
         android:textAllCaps="false"
-        android:textSize="36sp"
-        android:background="@color/myColor"
         android:textColor="@color/myWhite"
+        android:textSize="72sp"
         android:textStyle="bold"
         android:typeface="normal"
         android:verticalScrollbarPosition="defaultPosition"
@@ -358,12 +358,12 @@
 
     <TextView
         android:id="@+id/fuhao1"
-        android:layout_width="73dp"
-        android:layout_height="67dp"
-        android:text=" "
+        android:layout_width="40dp"
+        android:layout_height="105dp"
         android:background="@color/myColor"
+        android:text="+"
         android:textColor="@color/myWhite"
-        android:textSize="30sp"
+        android:textSize="72sp"
         app:layout_constraintBottom_toBottomOf="@+id/input"
         app:layout_constraintEnd_toEndOf="@+id/input"
         app:layout_constraintHorizontal_bias="0.0"
@@ -371,16 +371,18 @@
         app:layout_constraintTop_toTopOf="@+id/input"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="251dp"
-        android:layout_height="82dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="110dp"
+        android:layout_height="44dp"
+        android:text="计算器"
+        android:textColor="@color/myWhite"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/gongshi"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toEndOf="@+id/more"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintVertical_bias="0.526" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
