@@ -319,7 +319,7 @@
         android:gravity="right"
         android:textAllCaps="false"
         android:textColor="@color/myWhite"
-        android:textSize="72sp"
+        android:textSize="48sp"
         android:textStyle="bold"
         android:typeface="normal"
         android:verticalScrollbarPosition="defaultPosition"

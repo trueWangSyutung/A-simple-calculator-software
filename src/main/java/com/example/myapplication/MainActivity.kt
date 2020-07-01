@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.os.Vibrator
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -15,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var numxiao1=0.0
         var numxiao2=0.0
-        var fuhao =""
         var have_xiaoshudian=false
         val vibrator = getSystemService(Service.VIBRATOR_SERVICE) as Vibrator
         val madas = longArrayOf(10,30)
@@ -297,15 +297,22 @@ class MainActivity : AppCompatActivity() {
             }
         }
         numberdian.setOnClickListener {
-            if (input.text.toString() == "") {
+            if (have_xiaoshudian==true){
                 vibrator.vibrate(madas, -1)
-
-            } else {
-                vibrator.vibrate(madas, -1)
-
-                input.text = input.text.toString() + "."
-                have_xiaoshudian = true
+                Toast.makeText(this,"小数点已经存在，不可重复输入",Toast.LENGTH_SHORT).show()
             }
+            else{
+                if (input.text.toString() == "") {
+                    vibrator.vibrate(madas, -1)
+
+                } else {
+                    vibrator.vibrate(madas, -1)
+
+                    input.text = input.text.toString() + "."
+                    have_xiaoshudian = true
+                }
+            }
+
         }
         numberdel.setOnClickListener {
             vibrator.vibrate(madas, -1)
