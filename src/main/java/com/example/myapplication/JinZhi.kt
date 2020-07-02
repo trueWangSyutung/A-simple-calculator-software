@@ -2,8 +2,12 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_jin_zhi.*
+
+
 
 class JinZhi : AppCompatActivity() {
 
@@ -15,7 +19,69 @@ class JinZhi : AppCompatActivity() {
             bajinzhi.setText("")
             erjinzhi.setText("")
             shiliujinzhi.setText("")
+            bajinzhi.setEnabled(true)
+            erjinzhi.setEnabled(true)
+            shijinzhi.setEnabled(true)
+            shiliujinzhi.setEnabled(true)
         }
+
+        shiliujinzhi.addTextChangedListener(  object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+                bajinzhi.setEnabled(false)
+                erjinzhi.setEnabled(false)
+                shijinzhi.setEnabled(false)
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+        })
+        bajinzhi.addTextChangedListener(  object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+                shiliujinzhi.setEnabled(false)
+                erjinzhi.setEnabled(false)
+                shijinzhi.setEnabled(false)
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+        })
+        erjinzhi.addTextChangedListener(  object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+                bajinzhi.setEnabled(false)
+                shiliujinzhi.setEnabled(false)
+                shijinzhi.setEnabled(false)
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+        })
+        shijinzhi.addTextChangedListener(  object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+                bajinzhi.setEnabled(false)
+                erjinzhi.setEnabled(false)
+                shiliujinzhi.setEnabled(false)
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+        })
+
         quren.setOnClickListener {
             val bajinzhi1 = bajinzhi.text.toString()
             val erjinzhi1 = erjinzhi.text.toString()
