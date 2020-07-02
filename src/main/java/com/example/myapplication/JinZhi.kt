@@ -28,22 +28,81 @@ class JinZhi : AppCompatActivity() {
                 shiliujinzhi.setText(toShiLiu(shi))
             }
             else if(bajinzhi.text.toString()!="" && shijinzhi1=="" && erjinzhi1=="" && shiliujinzhi1==""){
-                val shi = ba_to_10(bajinzhi.text.toString().toInt()).toInt()
-                shijinzhi.setText(shi.toString())
-                erjinzhi.setText(toEr(shi))
-                shiliujinzhi.setText(toShiLiu(shi))
+                val numinput  = bajinzhi.text.toString()
+                var s = 0
+                for (i in 0 until  numinput.length){
+                        if (numinput[i] in  '0'..'7' ){
+                            s+=0
+                        }
+                        else{
+                            s+=1
+                        }
+
+
+                }
+
+                if (s == 0){
+                    val shi = ba_to_10(numinput.toInt()).toInt()
+                    shijinzhi.setText(shi.toString())
+                    erjinzhi.setText(toEr(shi))
+                    shiliujinzhi.setText(toShiLiu(shi))
+                }
+                else{
+                    Toast.makeText(this,"您的八进制数输入错误" +
+                            "", Toast.LENGTH_SHORT).show()
+                }
+
+
             }
             else if(erjinzhi.text.toString()!="" && shijinzhi1=="" && bajinzhi1=="" && shiliujinzhi1==""){
-                val shi = er_to_10(erjinzhi.text.toString().toInt()).toInt()
-                shijinzhi.setText(shi.toString())
-                bajinzhi.setText(toEight(shi))
-                shiliujinzhi.setText(toShiLiu(shi))
+                val numinput  = erjinzhi.text.toString()
+                var s = 0
+                for (i in 0 until  numinput.length){
+                    if (numinput[i] in '0'..'1' ){
+                        s+=0
+                    }
+                    else{
+                        s+=1
+                    }
+                }
+                if (s != 0){
+                    Toast.makeText(this,"您的二进制数输入错误" +
+                            "", Toast.LENGTH_SHORT).show()
+                }
+                else{
+                    val shi = er_to_10(numinput.toInt())
+                    shijinzhi.setText(shi.toString())
+                    bajinzhi.setText(toEight(shi.toInt()))
+                    shiliujinzhi.setText(toShiLiu(shi.toInt()))
+                }
+
+
             }
             else if(shiliujinzhi.text.toString()!="" && shijinzhi1=="" && erjinzhi1=="" && erjinzhi1=="" ){
-                val shi = shiliu_to_10(shiliujinzhi.text.toString()).toInt()
-                shijinzhi.setText(shi.toString())
-                bajinzhi.setText(toEight(shi))
-                erjinzhi.setText(toEr(shi))
+                val numinput  = shiliujinzhi.text.toString()
+                var s = 0
+                for (i in 0 until  numinput.length){
+                    if (numinput[i] in '0'..'9' || numinput[i] in 'A'..'F' ){
+                        s+=0
+                    }
+                    else{
+                        s+=1
+                    }
+                }
+                if (s != 0){
+                    Toast.makeText(this,"您的十六进制数输入错误" +
+                            "", Toast.LENGTH_SHORT).show()
+                }
+                else{
+                    val shi = shiliu_to_10(numinput).toInt()
+                    shijinzhi.setText(shi.toString())
+                    bajinzhi.setText(toEight(shi))
+                    erjinzhi.setText(toEr(shi))
+                }
+
+
+
+
             }
             else{
                 Toast.makeText(this,"输入错误" +
@@ -51,6 +110,10 @@ class JinZhi : AppCompatActivity() {
             }
         }
     }
+
+
+
+
 
     fun toEight(num:Int): String {
         var l=num
@@ -82,7 +145,7 @@ class JinZhi : AppCompatActivity() {
         return p
 
     }
-    fun toShiLiu(num:Int): String {
+    fun toShiLiu(num: Int): String {
         val lm = arrayOf("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F")
         var l=num
         var m =""
@@ -98,7 +161,7 @@ class JinZhi : AppCompatActivity() {
         return p
     }
 
-    fun er_to_10(num:Int):String{
+    fun er_to_10(num: Int):String{
         var t=num
         var s=0
         var long =  t.toString().length
@@ -142,3 +205,6 @@ class JinZhi : AppCompatActivity() {
     }
 
 }
+
+
+

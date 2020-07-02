@@ -195,13 +195,13 @@
         android:layout_width="103dp"
         android:layout_height="80dp"
         android:background="@color/myColor"
-        android:textColor="@color/myWhite"
         android:text="C"
+        android:textColor="@color/myWhite"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/number8"
         app:layout_constraintEnd_toStartOf="@+id/numberdel"
 
-        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
