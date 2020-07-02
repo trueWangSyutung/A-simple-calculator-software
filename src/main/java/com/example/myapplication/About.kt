@@ -14,7 +14,7 @@ class About : AppCompatActivity() {
 
         kaiyuan.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("https://github.com/Syutung/jisuanqitest")
+            intent.data = Uri.parse("https://github.com/Syutung2/A-simple-calculator-software")
             startActivity(intent);
 
         }
