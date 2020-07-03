@@ -131,6 +131,8 @@ class MainActivity : AppCompatActivity() {
 
         }
                 input.text=""
+                have_xiaoshudian = false
+
             }
         }
 
@@ -172,6 +174,8 @@ class MainActivity : AppCompatActivity() {
 
 
                     input.text = ""
+                    have_xiaoshudian = false
+
 
                 }
             }
@@ -218,6 +222,8 @@ class MainActivity : AppCompatActivity() {
 
 
                 input.text = ""
+                have_xiaoshudian = false
+
 
             }
         }
@@ -258,6 +264,7 @@ class MainActivity : AppCompatActivity() {
 
                     }
                     input.text = ""
+                    have_xiaoshudian = false
 
                 }
 
@@ -418,7 +425,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 input.text=""
-
+                have_xiaoshudian = false
                 if (have_xiaoshudian == true) {
                     numxiao1 = gongshi.text.toString().toDouble()
                     numxiao2 = 0.0
