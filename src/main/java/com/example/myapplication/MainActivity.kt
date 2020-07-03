@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.app.Service
 import android.content.Intent
 import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
 import android.widget.Toast
@@ -14,6 +15,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //当系统版本为4.4或者4.4以上时可以使用沉浸式状态栏
+
+
         var numxiao1=0.0
         var numxiao2=0.0
         var have_xiaoshudian=false

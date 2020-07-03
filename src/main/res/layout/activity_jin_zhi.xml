@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
     android:background="@color/myColor"
     tools:context="com.example.myapplication.JinZhi">
 
@@ -147,25 +149,25 @@
 
     <Button
         android:id="@+id/quren"
-        android:layout_width="108dp"
-        android:layout_height="59dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@mipmap/icon_button"
         android:text="转换"
+        android:textColor="@color/myWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.874"
-        android:background="@color/myColor"
-        android:textColor="@color/myWhite"
+        app:layout_constraintHorizontal_bias="0.851"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.803" />
 
     <Button
         android:id="@+id/qingkong"
-        android:layout_width="107dp"
-        android:background="@color/myColor"
-        android:textColor="@color/myWhite"
-        android:layout_height="58dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@mipmap/icon_button"
         android:text="清空"
+        android:textColor="@color/myWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/quren"
         app:layout_constraintHorizontal_bias="0.81"

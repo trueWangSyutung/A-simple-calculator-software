@@ -1,7 +1,9 @@
 package com.example.myapplication
 
+import android.app.Service
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Vibrator
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Toast
@@ -14,7 +16,11 @@ class JinZhi : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jin_zhi)
+        val vibrator = getSystemService(Service.VIBRATOR_SERVICE) as Vibrator
+        val madas = longArrayOf(10,30)
         qingkong.setOnClickListener {
+            vibrator.vibrate(madas, -1)
+
             shijinzhi.setText("")
             bajinzhi.setText("")
             erjinzhi.setText("")
@@ -83,6 +89,8 @@ class JinZhi : AppCompatActivity() {
         })
 
         quren.setOnClickListener {
+            vibrator.vibrate(madas, -1)
+
             val bajinzhi1 = bajinzhi.text.toString()
             val erjinzhi1 = erjinzhi.text.toString()
             val shiliujinzhi1 =shiliujinzhi.text.toString()

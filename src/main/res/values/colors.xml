@@ -5,4 +5,6 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="myWhite">#000000</color>
     <color name="myColor">#FFFFFF</color>
+
+    <color name="ceshi">#FFFFFF00</color>
 </resources>
