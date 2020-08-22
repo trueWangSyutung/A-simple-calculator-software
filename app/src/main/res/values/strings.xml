@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">My first calculator</string>
+    <string name="wangxudong_syutung_cn"> Email: wangxudong@syutung.cn</string>
+    <string name="thisis"> This is a simple calculator</string>
+    <string name="todo">TODO</string>
+    <string name="rrrr"> open source project files</string>
+    <string name="jinzhizhuanhuan"> hexadecimal conversion</string>
+    <string name="shijinzhi"> Decimal:</string>
+    <string name="bajinzhi"> octal:</string>
+    <string name="erjinzhi"> Binary:</string>
+    <string name="shiliujinzhi"> Hexadecimal:</string>
+    <string name="kong" translatable="false" >" "</string>
+    <string name="qingkong">Empty</string>
+    <string name="zhuanhuan"> conversion </string>
+    <string name="usingshixuang"> Instructions for use: each time you use it, you need to enter a number in any of the above four input boxes. If you don’t enter the others, it will automatically calculate the value of the other input boxes (please use capital letters in hexadecimal) )</string>
+    <string name="jianjie">This is a simple calculator</string>
+    <string name="jianjie2">\tThe author is a novice in android development, so UI design is free and there are still many bugs</string>
+    <string name="kaiyuan"> open source project files</string>
+    <string name="yinsi"> privacy agreement</string>
+    <string name="aboutme">About</string>
+    <string name="yinsixieyibiati"> privacy agreement</string>
+    <string name="more"> more</string>
+    <string name="syutung">creator: Syutung</string>
+    <string name="simply">simple calculator</string>
+    <string name="jisuanqi">calculator</string>
+    <string name="ysxy3">" Simple Toolbox User Privacy Agreement August 23, 2020 version 01"</string>
+    <string name="yssy1">\"Simple Toolbox User Privacy Agreement\"\\n August 23, 2020 Version 01\\n \\tAs a personal developer, I clearly understand the importance of personal data privacy and strictly abide by the Internet Security Law of the People’s Republic of China Regulations. \\n \\tWe use the information you share with us to improve our services and your experience. The purpose of this privacy agreement is to give you a clear understanding of how we collect and use your information, our determination to protect your information, and the various choices you have to manage your own information and privacy. This privacy agreement applies to various services provided by SyuTung and Simple Toolbox, including SyuTung, the official website of Simple Toolbox, applications, partner platforms or other services. The data subjects involved in this agreement include private users who visit the website of SyuTung and Simple Toolbox, SyuTung, business partners of Simple Toolbox, and applicants who apply for positions online. \\n \\tLast update date: August 23, 2020. \\n \\tIf you have any questions, comments or suggestions, please contact us through the following contact information:\\n \\tEmail: wangxudong@syutung.cn\\n This agreement will help you understand the following:\\n \\t How do we collect and use your personal information\\n 1. How do we collect and use your personal information\\n \\tIn order to better serve private users, SyuTung\'s simple toolbox software does not access the Internet, so it will not Collect your information to the server.</string>
+    <string name="ysxy2">\\tAs a personal developer, I clearly understand the importance of personal data privacy and strictly abide by the Internet Security Law of the People’s Republic of China Regulations. \\n \\tWe use the information you share with us to improve our services and your experience. The purpose of this privacy agreement is to give you a clear understanding of how we collect and use your information, our determination to protect your information, and the various choices you have to manage your own information and privacy. This privacy agreement applies to various services provided by SyuTung and Simple Toolbox, including SyuTung, the official website of Simple Toolbox, applications, partner platforms or other services. The data subjects involved in this agreement include private users who visit the website of SyuTung and Simple Toolbox, SyuTung, business partners of Simple Toolbox, and applicants who apply for positions online. \\n \\tLast update date: August 23, 2020. \\n \\tIf you have any questions, comments or suggestions, please contact us through the following contact information:\\n \\tEmail: wangxudong@syutung.cn\\n This agreement will help you understand the following:\\n \\t How do we collect and use your personal information\\n 1. How do we collect and use your personal information\\n \\tIn order to better serve private users, SyuTung\'s simple toolbox software does not access the Internet, so it will not Collect your information to the server.</string>
+
+</resources>

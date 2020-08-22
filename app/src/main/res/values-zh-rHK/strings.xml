@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">我的第一個計算器</string>
+    <string name="syutung">製作者：Syutung</string>
+    <string name="wangxudong_syutung_cn">郵箱：wangxudong@syutung.cn</string>
+    <string name="thisis">這是一個簡簡單單的計算器</string>
+    <string name="todo">TODO</string>
+    <string name="jianjie2">\t作者作為一個android開發的新手 那麼UI設計就免了 而且還存在不少的bug</string>
+    <string name="rrrr">開源項目文件</string>
+    <string name="jinzhizhuanhuan">進制轉換</string>
+    <string name="shijinzhi">十進制:</string>
+    <string name="bajinzhi">八進制:</string>
+    <string name="erjinzhi">二進制:</string>
+    <string name="shiliujinzhi">十六進制:</string>
+    <string name="qingkong">清空</string>
+    <string name="zhuanhuan">轉換</string>
+    <string name="usingshixuang">使用說明：每一次使用需要在上面四個輸入框的任意一個框中輸入數字，其他不輸入，會自動計算其他輸入框的數值（十六進制請用大寫字母）</string>
+    <string name="jianjie">這是一個簡簡單單的計算器</string>
+    <string name="kaiyuan">開源項目文件</string>
+    <string name="yinsi">隱私協議</string>
+    <string name="aboutme">關於</string>
+    <string name="yinsixieyibiati">隱私協議</string>
+    <string name="more">更多</string>
+    <string name="simply">簡單計算器</string>
+    <string name="jisuanqi">計算器</string>
+    <string name="yssy1">《簡單工具箱用戶隱私協議》\\n 2020年8月23日第01版本\\n \\t作為一個個人開發者，我明確知道將個人數據隱私的重要性，並嚴格遵守中華人民共和國互聯網安全法的相關規定。 \\n \\t我們使用您與我們分享的信息，期以提升我們的服務和您的體驗。本隱私協議旨在讓您清楚地了解，我們會如何收集及使用您的信息，我們保護您的信息的決心，以及您擁有的管理自身信息和隱私的各種選擇。本隱私協議適用於SyuTung、簡單工具箱為您提供的各種服務，包括SyuTung、簡單工具箱官方的網站、應用程序、合作夥伴平台或其他服務。本協議涉及的數據主體包括訪問SyuTung、簡單工具箱網站的私人用戶，SyuTung、簡單工具箱的商業夥伴以及在線申請職位的申請者。 \\n \\t最近更新日期：2020年8月23日。 \\n \\t如果您有任何疑問、意見或建議，請通過以下聯繫方式與我們聯繫：\\n \\t電子郵件：wangxudong@syutung.cn\\n 本協議將幫助您了解以下內容：\\n \\t我們如何收集和使用您的個人信息\\n 1.  我們如何收集和使用您的個人信息\\n \\t為了更好的為私人用戶提供服務，SyuTung的簡單工具箱軟件不接入互聯網，因此不會收集您的信息到服務器中。</string>
+    <string name="ysxy3">"《簡單工具箱用戶隱私協議》 2020年8月23日第01版本 "</string>
+    <string name="ysxy2">作為一個個人開發者，我明確知道將個人數據隱私的重要性，並嚴格遵守中華人民共和國互聯網安全法的相關規定。 \\n \\ 我們使用您與我們分享的信息，期以提升我們的服務和您的體驗。本隱私協議旨在讓您清楚地了解，我們會如何收集及使用您的信息，我們保護您的信息的決心，以及您擁有的管理自身信息和隱私的各種選擇。本隱私協議適用於SyuTung、簡單工具箱為您提供的各種服務，包括SyuTung、簡單工具箱官方的網站、應用程序、合作夥伴平台或其他服務。本協議涉及的數據主體包括訪問SyuTung、簡單工具箱網站的私人用戶，SyuTung、簡單工具箱的商業夥伴以及在線申請職位的申請者。 \\n \\t最近更新日期：2020年8月23日。 \\n \\t如果您有任何疑問、意見或建議，請通過以下聯繫方式與我們聯繫：\\n \\t電子郵件：wangxudong@syutung.cn\\n 本協議將幫助您了解以下內容：\\n \\t我們如何收集和使用您的個人信息\\n 1.  我們如何收集和使用您的個人信息\\n \\t為了更好的為私人用戶提供服務，SyuTung的簡單工具箱軟件不接入互聯網，因此不會收集您的信息到服務器中。</string>
+</resources>
