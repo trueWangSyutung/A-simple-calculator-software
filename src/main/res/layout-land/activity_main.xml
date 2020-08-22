@@ -1,409 +1,433 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:clipToPadding="true"
     android:background="@color/myColor"
-    tools:context="cn.syutung.jisuanqi.MainActivity"
-    >
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+
+    tools:context="cn.syutung.jisuanqi.MainActivity">
 
 
-        <Button
-            android:id="@+id/numberx"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-
-            android:layout_marginTop="16dp"
-            android:background="@mipmap/button10"
-            android:text="X"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.895"
-            app:layout_constraintStart_toEndOf="@+id/gongshi"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/numberbaifen"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="4dp"
-            android:background="@mipmap/button10"
-            android:text="%"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/number0"
-            app:layout_constraintEnd_toEndOf="@+id/number1"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/number1"
-            app:layout_constraintTop_toBottomOf="@+id/number1"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/number8"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@mipmap/button10"
-            android:text="8"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/number9"
-            app:layout_constraintEnd_toEndOf="@+id/numberdel"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/numberdel"
-            app:layout_constraintTop_toBottomOf="@+id/numberdel"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <Button
-            android:id="@+id/number5"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@mipmap/button10"
-            android:text="5"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/number6"
-            app:layout_constraintEnd_toEndOf="@+id/number8"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/number8"
-            app:layout_constraintTop_toBottomOf="@+id/number8"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <Button
-            android:id="@+id/number9"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@mipmap/button10"
-            android:text="9"
-
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/numberxJIAN"
-            app:layout_constraintEnd_toEndOf="@+id/numberxchu"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/numberxchu"
-            app:layout_constraintTop_toBottomOf="@+id/numberxchu"
-            app:layout_constraintVertical_bias="0.384" />
-
-        <Button
-            android:id="@+id/number0"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@mipmap/button10"
-            android:text="0"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/numberdian"
-            app:layout_constraintEnd_toEndOf="@+id/number2"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/number2"
-            app:layout_constraintTop_toBottomOf="@+id/number2"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/numberdel"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@mipmap/button10"
-            android:text="C"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/numberxchu"
-            app:layout_constraintEnd_toStartOf="@+id/numberxchu"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/gongshi"
-            app:layout_constraintTop_toTopOf="@+id/numberxchu"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/number7"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@mipmap/button10"
-            android:text="7"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/number8"
-            app:layout_constraintEnd_toEndOf="@+id/numberc"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/numberc"
-            app:layout_constraintTop_toBottomOf="@+id/numberc"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <Button
-            android:id="@+id/numberxJIAN"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="4dp"
-            android:background="@mipmap/button10"
-            android:text="-"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintEnd_toEndOf="@+id/numberx"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/numberx"
-            app:layout_constraintTop_toBottomOf="@+id/numberx" />
-
-        <Button
-            android:id="@+id/numberxJIA"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="4dp"
-            android:background="@mipmap/button10"
-            android:text="+"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintEnd_toEndOf="@+id/numberxJIAN"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/numberxJIAN"
-            app:layout_constraintTop_toBottomOf="@+id/numberxJIAN" />
-
-        <Button
-            android:id="@+id/number4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@mipmap/button10"
-            android:text="4"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/number5"
-            app:layout_constraintEnd_toEndOf="@+id/number7"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/number7"
-            app:layout_constraintTop_toBottomOf="@+id/number7"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <Button
-            android:id="@+id/number3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="4dp"
-            android:background="@mipmap/button10"
-            android:text="3"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintEnd_toEndOf="@+id/number6"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/number6"
-            app:layout_constraintTop_toBottomOf="@+id/number6" />
-
-        <Button
-            android:id="@+id/numberdian"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@mipmap/button10"
-            android:text="."
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/numberxdeng"
-            app:layout_constraintEnd_toEndOf="@+id/number3"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/number3"
-            app:layout_constraintTop_toBottomOf="@+id/number3"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/number1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@mipmap/button10"
-            android:text="1"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/number2"
-            app:layout_constraintEnd_toEndOf="@+id/number4"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/number4"
-            app:layout_constraintTop_toBottomOf="@+id/number4"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <Button
-            android:id="@+id/numberxdeng"
-            android:layout_width="58dp"
-            android:layout_height="122dp"
-            android:background="@mipmap/button26"
-            android:text="="
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/numberxJIA"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/numberxJIA"
-            app:layout_constraintTop_toBottomOf="@+id/numberxJIA"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/numberc"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-
-            android:background="@mipmap/button10"
-            android:text="D"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toTopOf="@+id/number8"
-            app:layout_constraintEnd_toStartOf="@+id/numberdel"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/gongshi"
-            app:layout_constraintTop_toTopOf="@+id/numberdel"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <Button
-            android:id="@+id/numberxchu"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@mipmap/button10"
-            android:text="/"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/numberx"
-            app:layout_constraintEnd_toStartOf="@+id/numberx"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/gongshi"
-            app:layout_constraintTop_toTopOf="@+id/numberx"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/number6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@mipmap/button10"
-            android:text="6"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/numberxJIA"
-            app:layout_constraintEnd_toEndOf="@+id/number9"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/number9"
-            app:layout_constraintTop_toBottomOf="@+id/number9"
-            app:layout_constraintVertical_bias="0.375" />
-
-        <Button
-            android:id="@+id/number2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@mipmap/button10"
-            android:text="2"
-            android:textColor="@color/myWhite"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="@+id/number3"
-            app:layout_constraintEnd_toEndOf="@+id/number5"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/number5"
-            app:layout_constraintTop_toBottomOf="@+id/number5"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <TextView
-            android:id="@+id/gongshi"
-            android:layout_width="312dp"
-            android:layout_height="58dp"
-            android:background="@mipmap/uiphoto27"
-            android:gravity="right"
-            android:textAllCaps="false"
-            android:textColor="@color/myWhite"
-            android:textIsSelectable="false"
-            android:textSize="44sp"
-            android:textStyle="bold|italic"
-            android:transformPivotX="@dimen/cardview_default_radius"
-            android:transformPivotY="@dimen/cardview_compat_inset_shadow"
-            android:typeface="sans"
-            android:verticalScrollbarPosition="defaultPosition"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.152"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.268"
-            tools:text="55" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="227dp"
-            android:layout_height="35dp"
-            android:background="@mipmap/uiphoto1"
-            android:gravity="center|center_horizontal|center_vertical"
-            android:text="简单计算器"
-            app:layout_constraintBottom_toTopOf="@+id/gongshi"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.197"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.386" />
-
-        <Button
-            android:id="@+id/more"
-            android:layout_width="53dp"
-            android:layout_height="36dp"
-            android:background="@mipmap/uiphoto30"
-            android:gravity="center"
-            android:text="更多"
-            android:textColor="#000000"
-            android:textStyle="bold|italic"
-            app:layout_constraintBottom_toBottomOf="@+id/textView11"
-            app:layout_constraintEnd_toStartOf="@+id/textView11"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView11"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <TextView
-            android:id="@+id/input"
-            android:layout_width="269dp"
-            android:layout_height="69dp"
-            android:background="@mipmap/uiphoto29"
-            android:gravity="right|center_horizontal|center_vertical"
-            android:maxLines="1"
-            android:textColor="@color/myWhite"
-            android:textSize="42sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/gongshi"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/gongshi"
-            app:layout_constraintTop_toBottomOf="@+id/gongshi"
-            app:layout_constraintVertical_bias="0.064"
-            tools:text="34" />
-
-        <Button
-            android:id="@+id/imageView3"
-            android:layout_width="46dp"
-            android:layout_height="34dp"
-            android:background="@mipmap/uiphoto30"
-            android:gravity="center"
-            android:text="关于"
-            android:textColor="#000000"
-            android:textStyle="bold|italic"
-            app:layout_constraintBottom_toBottomOf="@+id/textView11"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.002"
-            app:layout_constraintStart_toEndOf="@+id/textView11"
-            app:layout_constraintTop_toTopOf="@+id/textView11"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <TextView
-            android:id="@+id/fuhao1"
-            android:layout_width="67dp"
-            android:layout_height="71dp"
-            android:background="@mipmap/uiphoto28"
-            android:gravity="center|center_horizontal|center_vertical"
-            android:text="+"
-            android:textColor="@color/myWhite"
-            android:textSize="52sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/input"
-            app:layout_constraintEnd_toStartOf="@+id/input"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/gongshi"
-            app:layout_constraintTop_toTopOf="@+id/input"
-            app:layout_constraintVertical_bias="0.0" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="fill_horizontal|top|left"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="10dp"
+                    tools:layout_editor_absoluteY="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="45"
+                            android:orientation="horizontal"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="0dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+
+                                <Button
+                                    android:id="@+id/more"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:background="@mipmap/uiphoto30"
+                                    android:gravity="center"
+                                    android:text="更多"
+                                    android:textColor="#000000"
+                                    android:textSize="30sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/uiphoto1"
+                                    android:gravity="center|center_horizontal|center_vertical"
+                                    android:text="简单计算器"
+                                    android:textSize="30sp"
+                                    android:visibility="visible" />
+
+
+                                <Button
+                                    android:id="@+id/imageView3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:background="@mipmap/uiphoto30"
+                                    android:gravity="center"
+                                    android:text="关于"
+                                    android:textColor="#000000"
+                                    android:textSize="30sp"
+                                    android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7"
+                            android:orientation="vertical"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="46dp"
+                            tools:layout_editor_absoluteY="113dp">
+
+                                <TextView
+                                    android:id="@+id/gongshi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_weight="7"
+                                    android:background="@color/myColor"
+                                    android:gravity="right"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/myWhite"
+                                    android:textIsSelectable="false"
+                                    android:textSize="60sp"
+                                    android:textStyle="bold|italic"
+                                    android:transformPivotX="@dimen/cardview_default_radius"
+                                    android:transformPivotY="@dimen/cardview_compat_inset_shadow"
+
+                                    android:typeface="sans"
+                                    android:verticalScrollbarPosition="defaultPosition"
+                                    tools:text="55" />
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="?attr/dialogPreferredPadding"
+                                    android:layout_weight="9"
+                                    android:orientation="horizontal"
+
+                                    tools:ignore="MissingConstraints"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    tools:layout_editor_absoluteY="245dp">
+
+                                        <TextView
+                                            android:id="@+id/fuhao1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_weight="46"
+                                            android:gravity="center"
+                                            android:text="+"
+                                            android:textColor="@color/myWhite"
+                                            android:textSize="55sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/input"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="6dp"
+                                            android:layout_weight="4"
+                                            android:background="@color/myColor"
+                                            android:gravity="right|center_horizontal|center_vertical"
+                                            android:maxLines="1"
+                                            android:textColor="@color/myWhite"
+
+                                            android:textSize="54sp"
+                                            tools:text="44444444444444444444444" />
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="1dp"
+                    tools:layout_editor_absoluteY="393dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteY="363dp">
+
+                                <Button
+                                    android:id="@+id/numberc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="D"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/number7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="7"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/number4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="4"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/number1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="1"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/numberbaifen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="%"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="132dp">
+
+                                <Button
+                                    android:id="@+id/numberdel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+
+                                    android:background="@mipmap/button10"
+                                    android:text="C"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/number8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="8"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/number5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1"
+
+
+                                    android:background="@mipmap/button10"
+                                    android:text="5"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/number2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+
+                                    android:text="2"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintVertical_bias="1.0" />
+
+                                <Button
+                                    android:id="@+id/number0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="0"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+
+                            tools:ignore="MissingConstraints">
+
+                                <Button
+                                    android:id="@+id/numberxchu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="/"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp"
+                                     />
+
+                                <Button
+                                    android:id="@+id/number9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="9"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/number6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="6"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/number3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="3"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/numberdian"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="."
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:gravity="clip_horizontal|center|clip_vertical|fill|fill_horizontal"
+                            android:orientation="vertical"
+                            tools:ignore="MissingConstraints">
+
+
+                                <Button
+                                    android:id="@+id/numberx"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+
+                                    android:background="@mipmap/button10"
+                                    android:text="X"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/numberxJIAN"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="-"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/numberxJIA"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/button10"
+                                    android:text="+"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                                <Button
+                                    android:id="@+id/numberxdeng"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="2"
+                                    android:background="@mipmap/button26"
+                                    android:text="="
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="36sp" />
+
+                        </LinearLayout>
+
+                </LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

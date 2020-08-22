@@ -1,208 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
+    android:background="@color/myColor"
     android:clipToPadding="true"
-    tools:context="cn.syutung.jisuanqi.JinZhi"
-   >
+    android:fitsSystemWindows="true"
+    tools:context="cn.syutung.jisuanqi.JinZhi">
 
-
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="312dp"
-                    android:layout_height="38dp"
-                    android:background="@mipmap/uiphoto1"
-                    android:gravity="center"
-                    android:text="进制转换"
-                    android:textColor="@color/myWhite"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.048"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.114" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="120dp"
-                    android:layout_height="32dp"
-                    android:background="@mipmap/uiphoto29"
-                    android:gravity="center_vertical"
-                    android:text="  八进制:"
-                    android:textColor="@color/myWhite"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/bajinzhi"
-                    app:layout_constraintEnd_toStartOf="@+id/bajinzhi"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/textView7"
-                    app:layout_constraintTop_toBottomOf="@+id/shijinzhi"
-                    app:layout_constraintVertical_bias="0.685" />
-
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="120dp"
-                    android:layout_height="32dp"
-                    android:background="@mipmap/uiphoto29"
-                    android:gravity="center_vertical"
-                    android:text="  十进制:"
-                    android:textColor="@color/myWhite"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/shijinzhi"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/textView6"
-                    app:layout_constraintTop_toTopOf="@+id/shijinzhi"
-                    app:layout_constraintVertical_bias="0.468" />
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="120dp"
-                    android:layout_height="32dp"
-                    android:background="@mipmap/uiphoto29"
-                    android:gravity="center_vertical"
-                    android:text="  二进制:"
-                    android:textColor="@color/myWhite"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/erjinzhi"
-                    app:layout_constraintEnd_toStartOf="@+id/erjinzhi"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/textView8"
-                    app:layout_constraintTop_toTopOf="@+id/erjinzhi" />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="120dp"
-                    android:layout_height="32dp"
-                    android:background="@mipmap/uiphoto29"
-                    android:gravity="center_vertical"
-                    android:text="  十六进制："
-                    android:textColor="@color/myWhite"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/shiliujinzhi"
-                    app:layout_constraintEnd_toStartOf="@+id/shiliujinzhi"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/textView9"
-                    app:layout_constraintTop_toTopOf="@+id/shiliujinzhi"
-                    app:layout_constraintVertical_bias="0.437" />
-
-                <EditText
-                    android:id="@+id/shijinzhi"
-                    android:layout_width="356dp"
-                    android:layout_height="wrap_content"
-                    android:background="@mipmap/uiphoto27"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:inputType="number"
-                    android:textColor="@color/myWhite"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/textView6"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/textView7"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6"
-                    app:layout_constraintVertical_bias="0.047" />
-
-                <EditText
-                    android:id="@+id/bajinzhi"
-                    android:layout_width="356dp"
-                    android:layout_height="wrap_content"
-
-                    android:background="@mipmap/uiphoto27"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:inputType="number"
-                    android:textColor="@color/myWhite"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/shijinzhi"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/shijinzhi"
-                    app:layout_constraintTop_toBottomOf="@+id/shijinzhi"
-                    app:layout_constraintVertical_bias="0.06"
-                    tools:text="44" />
-
-                <EditText
-                    android:id="@+id/erjinzhi"
-                    android:layout_width="356dp"
-                    android:layout_height="wrap_content"
-
-                    android:background="@mipmap/uiphoto27"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:inputType="number"
-                    android:textColor="@color/myWhite"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/bajinzhi"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/bajinzhi"
-                    app:layout_constraintTop_toBottomOf="@+id/bajinzhi"
-                    app:layout_constraintVertical_bias="0.089"
-                    tools:text="33" />
-
-    <EditText
-        android:id="@+id/shiliujinzhi"
-        android:layout_width="356dp"
-        android:layout_height="wrap_content"
-
-        android:background="@mipmap/uiphoto27"
-        android:ems="10"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:inputType="textPersonName"
-        android:textColor="@color/myWhite"
-        android:textSize="24sp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/erjinzhi"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/erjinzhi"
-        app:layout_constraintTop_toBottomOf="@+id/erjinzhi"
-        app:layout_constraintVertical_bias="0.079" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-    <Button
-                    android:id="@+id/quren"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:background="@mipmap/button10"
-                    android:text="转换"
-                    android:textColor="@color/myWhite"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/qingkong"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/qingkong"
-                    app:layout_constraintTop_toBottomOf="@+id/qingkong"
-                    app:layout_constraintVertical_bias="0.252" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:background="@mipmap/uiphoto1"
+            android:gravity="center"
+            android:text="进制转换"
+            android:textColor="@color/myWhite"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="十六进制:"
+                        android:textColor="@color/myWhite"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/shiliujinzhi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:background="@mipmap/uiphoto27"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/myWhite"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="八进制:"
+                        android:textColor="@color/myWhite"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/bajinzhi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:background="@mipmap/uiphoto27"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="@color/myWhite"
+                        android:textSize="24sp"
+                        tools:text="5555555555555555555555555555555555555555555555" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="二进制:"
+                        android:textColor="@color/myWhite"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/erjinzhi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:background="@mipmap/uiphoto27"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="@color/myWhite"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="十进制:"
+                        android:textColor="@color/myWhite"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/shijinzhi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@mipmap/uiphoto27"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="@color/myWhite"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="              " />
 
                 <Button
                     android:id="@+id/qingkong"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:background="@mipmap/button10"
                     android:text="清空"
                     android:textColor="@color/myWhite"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/textView12"
-                    app:layout_constraintHorizontal_bias="0.777"
-                    app:layout_constraintStart_toStartOf="@+id/textView12"
-                    app:layout_constraintTop_toBottomOf="@+id/textView12"
-                    app:layout_constraintVertical_bias="0.229" />
+                    android:textSize="36sp" />
 
                 <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="330dp"
-                    android:layout_height="80dp"
-                    android:text="使用说明：每一次使用需要在上面四个输入框的任意一个框中输入数字，其他不输入，会自动计算其他输入框的数值（十六进制请用大写字母）"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.055" />
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="              " />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:id="@+id/quren"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@mipmap/button10"
+                    android:text="转换"
+                    android:textColor="@color/myWhite"
+                    android:textSize="36sp" />
 
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="              " />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="使用说明：每一次使用需要在上面四个输入框的任意一个框中输入数字，其他不输入，会自动计算其他输入框的数值（十六进制请用大写字母）"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

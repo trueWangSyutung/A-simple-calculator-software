@@ -1,6 +1,7 @@
 package cn.syutung.jisuanqi
 
 
+import android.app.ActionBar
 import android.app.Service
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -10,7 +11,9 @@ import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
+import android.view.Display
 import android.view.View
+import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -22,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     protected var useStatusBarColor = true
     fun copyToClipboard(info: String) {
         val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        val clipData = ClipData.newPlainText(info, "要复制到剪贴板的字符串")
+        val clipData = ClipData.newPlainText(info,info)
         clipboardManager.setPrimaryClip(clipData)
         Toast.makeText(this,"已复制结果哦到剪贴板",Toast.LENGTH_SHORT).show()
     }
