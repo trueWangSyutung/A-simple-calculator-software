@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:clipToPadding="true"
     android:layout_height="match_parent"
-    tools:context="com.example.myapplication.About">
+    tools:context="cn.syutung.jisuanqi.About">
 
     <TextView
         android:id="@+id/textView"
@@ -55,7 +55,7 @@
         android:id="@+id/imageView"
         android:layout_width="216dp"
         android:layout_height="184dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="180dp"
         android:background="@color/myColor"
         android:textColor="@color/myWhite"
         app:layout_constraintEnd_toEndOf="@+id/textView"

@@ -7,145 +7,159 @@
     android:fitsSystemWindows="true"
     android:clipToPadding="true"
     android:background="@color/myColor"
-    tools:context="com.example.myapplication.JinZhi">
+    tools:context="cn.syutung.jisuanqi.JinZhi">
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="312dp"
+        android:layout_height="38dp"
+        android:background="@mipmap/uiphoto1"
+        android:gravity="center"
         android:text="进制转换"
-        android:background="@color/myColor"
         android:textColor="@color/myWhite"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/myColor"
-        android:textColor="@color/myWhite"
-        android:text="十进制："
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.052" />
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/myColor"
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        android:background="@mipmap/uiphoto29"
+        android:gravity="center_vertical"
+        android:text="  八进制:"
         android:textColor="@color/myWhite"
-        android:text="八进制："
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bajinzhi"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.243" />
+        app:layout_constraintTop_toBottomOf="@+id/shijinzhi"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        android:background="@mipmap/uiphoto29"
+        android:gravity="center_vertical"
+        android:text="  十进制:"
+        android:textColor="@color/myWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/shijinzhi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="二进制："
-        android:textSize="18sp"
-        android:background="@color/myColor"
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        android:background="@mipmap/uiphoto29"
+        android:gravity="center_vertical"
+        android:text="  二进制:"
         android:textColor="@color/myWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/erjinzhi"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.403" />
+        app:layout_constraintTop_toBottomOf="@+id/bajinzhi"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="十六进制："
-        android:textSize="18sp"
-        android:background="@color/myColor"
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        android:background="@mipmap/uiphoto29"
+        android:gravity="center_vertical"
+        android:text="  十六进制："
         android:textColor="@color/myWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/shiliujinzhi"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
+        app:layout_constraintTop_toBottomOf="@+id/erjinzhi"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/shijinzhi"
-        android:layout_width="353dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/myColor"
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/uiphoto27"
         android:ems="10"
+        android:gravity="center"
         android:inputType="number"
         android:textColor="@color/myWhite"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.089" />
 
     <EditText
         android:id="@+id/bajinzhi"
         android:layout_width="356dp"
-        android:layout_height="46dp"
+        android:layout_height="wrap_content"
 
-        android:layout_marginTop="12dp"
-        android:background="@color/myColor"
+        android:background="@mipmap/uiphoto27"
         android:ems="10"
+        android:gravity="center"
         android:inputType="number"
         android:textColor="@color/myWhite"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.271"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.014" />
+        app:layout_constraintEnd_toEndOf="@+id/shijinzhi"
+        app:layout_constraintStart_toStartOf="@+id/shijinzhi"
+        app:layout_constraintTop_toBottomOf="@+id/shijinzhi"
+        app:layout_constraintVertical_bias="0.059"
+        tools:text="44" />
 
     <EditText
         android:id="@+id/erjinzhi"
         android:layout_width="356dp"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
 
+        android:background="@mipmap/uiphoto27"
         android:ems="10"
+        android:gravity="center"
         android:inputType="number"
         android:textColor="@color/myWhite"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.272"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintEnd_toEndOf="@+id/bajinzhi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bajinzhi"
+        app:layout_constraintTop_toBottomOf="@+id/bajinzhi"
+        app:layout_constraintVertical_bias="0.088"
+        tools:text="33" />
 
     <EditText
         android:id="@+id/shiliujinzhi"
         android:layout_width="356dp"
-        android:layout_height="49dp"
+        android:layout_height="wrap_content"
 
-        android:background="@color/myColor"
+        android:background="@mipmap/uiphoto27"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:textColor="@color/myWhite"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.309"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintEnd_toEndOf="@+id/erjinzhi"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/erjinzhi"
+        app:layout_constraintTop_toBottomOf="@+id/erjinzhi"
+        app:layout_constraintVertical_bias="0.095" />
 
     <Button
         android:id="@+id/quren"
@@ -156,10 +170,10 @@
         android:textColor="@color/myWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintHorizontal_bias="0.864"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintTop_toBottomOf="@+id/shiliujinzhi"
+        app:layout_constraintVertical_bias="0.223" />
 
     <Button
         android:id="@+id/qingkong"
@@ -168,12 +182,12 @@
         android:background="@mipmap/button10"
         android:text="清空"
         android:textColor="@color/myWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/quren"
         app:layout_constraintEnd_toStartOf="@+id/quren"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.816"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintTop_toTopOf="@+id/quren"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView12"
@@ -184,7 +198,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qingkong"
-        app:layout_constraintVertical_bias="0.489" />
+        app:layout_constraintTop_toBottomOf="@+id/quren"
+        app:layout_constraintVertical_bias="0.346" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

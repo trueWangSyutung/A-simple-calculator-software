@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">我的第一个计算器</string>
+    <string name="app_name" translatable="false">我的第一个计算器</string>
+    <string name="syutung">制作者：Syutung</string>
+    <string name="wangxudong_syutung_cn">邮箱：wangxudong@syutung.cn</string>
+    <string name="thisis">这是一个简简单单的计算器</string>
+    <string name="todo">TODO</string>
+    <string name="t_android_n_ui_n_bug">\t作者作为一个android开发的新手\n那么UI设计就免了\n而且还存在不少的bug</string>
+    <string name="rrrr">开源项目文件</string>
 
 
 </resources>
