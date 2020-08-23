@@ -1,15 +1,12 @@
 package cn.syutung.jisuanqi
 
-import android.annotation.SuppressLint
-import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.textclassifier.TextClassifierEvent
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.myapplication.R
-import kotlinx.android.synthetic.main.activity_yinsixieyi.*
-import java.util.*
+import kotlinx.android.synthetic.main.activity_yinsixieyi.more3
 
 class YinsixieyiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,4 +15,19 @@ class YinsixieyiActivity : AppCompatActivity() {
 
 
     }
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        val mySysTheme =
+            newConfig.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        when(mySysTheme){
+            Configuration.UI_MODE_NIGHT_YES ->{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+            Configuration.UI_MODE_NIGHT_NO ->{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
+        recreate()
+    }
+
 }

@@ -3,20 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/myColor"
-    android:fitsSystemWindows="true"
-    android:clipToPadding="true"
     android:layout_height="match_parent"
+    android:background="@color/myColor"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:gravity="fill_horizontal"
     tools:context="cn.syutung.jisuanqi.More">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="2"
             android:orientation="horizontal">
 
@@ -32,13 +33,7 @@
                 android:scaleType="fitXY"
                 android:scrollbarAlwaysDrawHorizontalTrack="false"
                 android:scrollbarAlwaysDrawVerticalTrack="false"
-                android:src="@drawable/jisuanqi"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.234"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.21" />
+                android:src="@drawable/jisuanqi" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -49,7 +44,7 @@
                 android:gravity="center"
                 android:text="@string/jisuanqi"
                 android:textColor="@color/myWhite"
-                android:textSize="36sp"
+                android:textSize="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/jisuanqi"
                 app:layout_constraintHorizontal_bias="0.437"
@@ -60,7 +55,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="2"
             android:orientation="horizontal">
 
@@ -86,9 +81,8 @@
                 android:background="@color/myColor"
                 android:gravity="center"
                 android:text="@string/jinzhizhuanhuan"
-
                 android:textColor="@color/myWhite"
-                android:textSize="36sp"
+                android:textSize="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/jinzhi"
                 app:layout_constraintStart_toStartOf="@+id/jinzhi"

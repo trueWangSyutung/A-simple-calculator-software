@@ -1,6 +1,8 @@
 package cn.syutung.jisuanqi
 
 import android.app.Service
+import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -11,9 +13,11 @@ import android.text.TextWatcher
 import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_jin_zhi.*
-
+import kotlinx.android.synthetic.main.activity_jin_zhi.about3
+import kotlinx.android.synthetic.main.activity_jin_zhi.more3
 
 
 class JinZhi : AppCompatActivity() {
@@ -43,6 +47,21 @@ class JinZhi : AppCompatActivity() {
                 View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         }
     }
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        val mySysTheme =
+            newConfig.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        when(mySysTheme){
+            Configuration.UI_MODE_NIGHT_YES ->{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+            Configuration.UI_MODE_NIGHT_NO ->{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
+        recreate()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -64,7 +83,14 @@ class JinZhi : AppCompatActivity() {
             shijinzhi.setEnabled(true)
             shiliujinzhi.setEnabled(true)
         }
-
+        about3.setOnClickListener {
+            val intant = Intent(this, About::class.java)
+            startActivity(intant)
+        }
+        more3.setOnClickListener {
+            val intant = Intent(this, More::class.java)
+            startActivity(intant)
+        }
         shiliujinzhi.addTextChangedListener(  object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
                 bajinzhi.setEnabled(false)

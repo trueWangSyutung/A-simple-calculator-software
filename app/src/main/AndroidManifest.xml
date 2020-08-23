@@ -11,29 +11,28 @@
         android:roundIcon="@mipmap/ic_gongjxiang_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="cn.syutung.jisuanqi.YinsixieyiActivity"></activity>
+        <activity
+            android:name="cn.syutung.jisuanqi.YinsixieyiActivity"
+            android:screenOrientation="user" />
         <activity
             android:name="cn.syutung.jisuanqi.JinZhi"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="sensor" />
+            android:screenOrientation="user" />
         <activity
             android:name="cn.syutung.jisuanqi.More"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="sensor">
+            android:screenOrientation="user">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="cn.syutung.jisuanqi.About"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="sensor" />
+            android:screenOrientation="user" />
         <activity
             android:name="cn.syutung.jisuanqi.MainActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="sensor"></activity>
+            android:screenOrientation="user">
+
+        </activity>
     </application>
 
 </manifest>

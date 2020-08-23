@@ -11,8 +11,8 @@
     tools:context="cn.syutung.jisuanqi.More">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -44,7 +44,7 @@
                 android:gravity="center"
                 android:text="@string/jisuanqi"
                 android:textColor="@color/myWhite"
-                android:textSize="24sp"
+                android:textSize="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/jisuanqi"
                 app:layout_constraintHorizontal_bias="0.437"
@@ -55,7 +55,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="2"
             android:orientation="horizontal">
 
@@ -82,7 +82,7 @@
                 android:gravity="center"
                 android:text="@string/jinzhizhuanhuan"
                 android:textColor="@color/myWhite"
-                android:textSize="24sp"
+                android:textSize="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/jinzhi"
                 app:layout_constraintStart_toStartOf="@+id/jinzhi"

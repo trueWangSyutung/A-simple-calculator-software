@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/myColor"
+
     tools:context="cn.syutung.jisuanqi.YinsixieyiActivity">
 
     <LinearLayout
@@ -21,15 +23,15 @@
             tools:layout_editor_absoluteY="0dp">
 
             <Button
-                android:id="@+id/more"
+                android:id="@+id/more3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:background="@mipmap/uiphoto30"
+                android:background="@drawable/uiphoto30"
                 android:gravity="center"
                 android:text="@string/more"
-                android:textColor="#000000"
-                android:textSize="30sp"
+                android:textColor="@color/myWhite"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -37,23 +39,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@mipmap/uiphoto1"
+                android:background="@drawable/uiphoto1"
                 android:gravity="center|center_horizontal|center_vertical"
                 android:text="@string/yinsixieyibiati"
-                android:textSize="30sp"
+                android:textColor="@color/myWhite"
+
+                android:textSize="20dp"
                 android:visibility="visible" />
 
 
             <Button
-                android:id="@+id/imageView3"
+                android:id="@+id/about3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:background="@mipmap/uiphoto30"
+                android:background="@drawable/uiphoto30"
                 android:gravity="center"
                 android:text="@string/aboutme"
-                android:textColor="#000000"
-                android:textSize="30sp"
+                android:textColor="@color/myWhite"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -146,12 +150,24 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:text="@string/ysxy3"
+            android:textColor="@color/myWhite"
+            android:textSize="22dp" />
+
+        <TextView
             android:id="@+id/textView27"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/myWhite"
+
             android:layout_weight="1"
-            android:text="@string/yssy1"
-            android:textSize="20sp" />
+            android:text="@string/ysxy2"
+            android:textSize="18dp" />
 
     </LinearLayout>
 </RelativeLayout>

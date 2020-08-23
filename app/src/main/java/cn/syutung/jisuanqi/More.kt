@@ -1,6 +1,7 @@
 package cn.syutung.jisuanqi
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -8,12 +9,28 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_more.*
 
 class More : AppCompatActivity() {
     protected var useThemestatusBarColor = false
     protected var useStatusBarColor = true
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        val mySysTheme =
+            newConfig.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        when(mySysTheme){
+            Configuration.UI_MODE_NIGHT_YES ->{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+            Configuration.UI_MODE_NIGHT_NO ->{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
+        recreate()
+    }
+
     protected fun setStatusBar() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) { //5.0及以上
             val decorView: View = window.decorView

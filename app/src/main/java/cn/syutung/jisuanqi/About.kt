@@ -11,6 +11,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_about.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class About : AppCompatActivity() {
     protected var useThemestatusBarColor = false
@@ -44,6 +45,8 @@ class About : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
         setStatusBar()
+
+
         kaiyuan.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("https://github.com/Syutung2/A-simple-calculator-software")

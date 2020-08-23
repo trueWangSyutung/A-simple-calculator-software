@@ -8,22 +8,19 @@
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
 
+    android:gravity="center"
     tools:context="cn.syutung.jisuanqi.MainActivity">
-
-
-
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"
             android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
+                    android:layout_weight="1"
                     android:gravity="fill_horizontal|top|left"
                     android:orientation="vertical"
                     tools:ignore="MissingConstraints"
@@ -33,23 +30,22 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="45"
+                            android:layout_weight="10"
                             android:orientation="horizontal"
                             tools:ignore="MissingConstraints"
                             tools:layout_editor_absoluteX="0dp"
                             tools:layout_editor_absoluteY="0dp">
 
-
                                 <Button
-                                    android:id="@+id/more"
+                                    android:id="@+id/more3"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_weight="2"
-                                    android:background="@mipmap/uiphoto30"
+                                    android:background="@drawable/uiphoto30"
                                     android:gravity="center"
-                                    android:text="更多"
-                                    android:textColor="#000000"
-                                    android:textSize="30sp"
+                                    android:text="@string/more"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="20dp"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -57,23 +53,24 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/uiphoto1"
+                                    android:background="@drawable/uiphoto1"
                                     android:gravity="center|center_horizontal|center_vertical"
-                                    android:text="简单计算器"
-                                    android:textSize="30sp"
+                                    android:text="@string/simply"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="20dp"
                                     android:visibility="visible" />
 
 
                                 <Button
-                                    android:id="@+id/imageView3"
+                                    android:id="@+id/about3"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_weight="2"
-                                    android:background="@mipmap/uiphoto30"
+                                    android:background="@drawable/uiphoto30"
                                     android:gravity="center"
-                                    android:text="关于"
-                                    android:textColor="#000000"
-                                    android:textSize="30sp"
+                                    android:text="@string/aboutme"
+                                    android:textColor="@color/myWhite"
+                                    android:textSize="20dp"
                                     android:textStyle="bold" />
                         </LinearLayout>
 
@@ -81,7 +78,7 @@
                             android:id="@+id/linearLayout6"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="7"
+                            android:layout_weight="1"
                             android:orientation="vertical"
                             tools:ignore="MissingConstraints"
                             tools:layout_editor_absoluteX="46dp"
@@ -98,7 +95,7 @@
                                     android:textAllCaps="false"
                                     android:textColor="@color/myWhite"
                                     android:textIsSelectable="false"
-                                    android:textSize="60sp"
+                                    android:textSize="60dp"
                                     android:textStyle="bold|italic"
                                     android:transformPivotX="@dimen/cardview_default_radius"
                                     android:transformPivotY="@dimen/cardview_compat_inset_shadow"
@@ -114,7 +111,6 @@
                                     android:layout_marginTop="?attr/dialogPreferredPadding"
                                     android:layout_weight="9"
                                     android:orientation="horizontal"
-
                                     tools:ignore="MissingConstraints"
                                     tools:layout_editor_absoluteX="0dp"
                                     tools:layout_editor_absoluteY="245dp">
@@ -124,11 +120,11 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:layout_marginTop="8dp"
-                                            android:layout_weight="46"
+                                            android:layout_weight="42"
                                             android:gravity="center"
                                             android:text="+"
                                             android:textColor="@color/myWhite"
-                                            android:textSize="55sp"
+                                            android:textSize="52dp"
                                             android:textStyle="bold" />
 
                                         <TextView
@@ -142,19 +138,19 @@
                                             android:maxLines="1"
                                             android:textColor="@color/myWhite"
 
-                                            android:textSize="54sp"
-                                            tools:text="44444444444444444444444" />
+                                            android:textSize="42dp"
+                                            tools:text="34" />
                                 </LinearLayout>
 
                         </LinearLayout>
 
-
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
-                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center|center_horizontal|center_vertical"
                     android:orientation="horizontal"
                     tools:ignore="MissingConstraints"
                     tools:layout_editor_absoluteX="1dp"
@@ -176,10 +172,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="0dp"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="D"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/number7"
@@ -187,10 +183,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="7"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/number4"
@@ -198,10 +194,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="4"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/number1"
@@ -209,10 +205,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="1"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/numberbaifen"
@@ -220,10 +216,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="%"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                         </LinearLayout>
 
@@ -242,10 +238,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
 
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="C"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/number8"
@@ -253,10 +249,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="8"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/number5"
@@ -266,10 +262,10 @@
                                     android:layout_weight="1"
 
 
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="5"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/number2"
@@ -277,11 +273,11 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
 
                                     android:text="2"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp"
+                                    android:textSize="36dp"
                                     app:layout_constraintHorizontal_bias="0.0"
                                     app:layout_constraintVertical_bias="1.0" />
 
@@ -291,10 +287,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="0"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                         </LinearLayout>
 
@@ -313,11 +309,10 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="/"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp"
-                                     />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/number9"
@@ -326,10 +321,10 @@
                                     android:layout_marginTop="6dp"
 
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="9"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/number6"
@@ -338,10 +333,10 @@
                                     android:layout_marginTop="6dp"
 
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="6"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/number3"
@@ -349,10 +344,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="3"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/numberdian"
@@ -361,10 +356,10 @@
                                     android:layout_marginTop="6dp"
 
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="."
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                         </LinearLayout>
 
@@ -379,7 +374,7 @@
                             android:gravity="clip_horizontal|center|clip_vertical|fill|fill_horizontal"
                             android:orientation="vertical"
                             tools:ignore="MissingConstraints">
-
+                                android:layout_weight="1"
 
                                 <Button
                                     android:id="@+id/numberx"
@@ -387,10 +382,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
 
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="X"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/numberxJIAN"
@@ -398,10 +393,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="-"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/numberxJIA"
@@ -409,10 +404,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
                                     android:layout_weight="1"
-                                    android:background="@mipmap/button10"
+                                    android:background="@drawable/button10"
                                     android:text="+"
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                                 <Button
                                     android:id="@+id/numberxdeng"
@@ -420,14 +415,16 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
                                     android:layout_weight="2"
-                                    android:background="@mipmap/button26"
+                                    android:background="@drawable/button26"
                                     android:text="="
                                     android:textColor="@color/myWhite"
-                                    android:textSize="36sp" />
+                                    android:textSize="36dp" />
 
                         </LinearLayout>
 
                 </LinearLayout>
+
         </LinearLayout>
+
 
 </RelativeLayout>

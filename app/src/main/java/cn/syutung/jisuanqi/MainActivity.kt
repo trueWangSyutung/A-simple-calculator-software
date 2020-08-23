@@ -1,22 +1,21 @@
 package cn.syutung.jisuanqi
 
 
-import android.app.ActionBar
 import android.app.Service
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
-import android.view.Display
 import android.view.View
-import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -30,6 +29,20 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this,"已复制结果哦到剪贴板",Toast.LENGTH_SHORT).show()
     }
 
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        val mySysTheme =
+            newConfig.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        when(mySysTheme){
+            Configuration.UI_MODE_NIGHT_YES ->{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+            Configuration.UI_MODE_NIGHT_NO ->{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
+        recreate()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -43,11 +56,11 @@ class MainActivity : AppCompatActivity() {
         val vibrator = getSystemService(Service.VIBRATOR_SERVICE) as Vibrator
         val madas = longArrayOf(10,30)
 
-        imageView3.setOnClickListener {
+        about3.setOnClickListener {
             val intant = Intent(this, About::class.java)
             startActivity(intant)
         }
-        more.setOnClickListener {
+        more3.setOnClickListener {
             val intant = Intent(this, More::class.java)
             startActivity(intant)
         }
