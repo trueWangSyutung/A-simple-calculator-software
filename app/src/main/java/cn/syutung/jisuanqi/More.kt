@@ -1,21 +1,46 @@
 package cn.syutung.jisuanqi
 
+import android.Manifest
+import android.app.WallpaperManager
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.content.res.Configuration
-import android.graphics.Color
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.view.WindowManager
 import android.widget.Toast
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.example.myapplication.R
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_more.*
 
+
 class More : AppCompatActivity() {
-    protected var useThemestatusBarColor = false
-    protected var useStatusBarColor = true
+    fun shouToast(sss:String){
+        Toast.makeText(this,sss, Toast.LENGTH_SHORT).show()
+    }
+    private val mPermissions = arrayOf<String>(
+        Manifest.permission.READ_EXTERNAL_STORAGE
+    )
+    private fun lacksPermission(mContexts: Context, permission: String): Boolean {
+        return ContextCompat.checkSelfPermission(mContexts, permission) ==
+                PackageManager.PERMISSION_DENIED
+    }
+    fun lacksPermissions(mContexts: Context?, mPermissions: Array<String>?): Boolean {
+        if (mPermissions != null) {
+            for (permission in mPermissions) {
+                if (lacksPermission(mContexts!!, permission)) {
+                   shouToast( "没有开启权限")
+                    return true
+                }
+            }
+        }
+        return false
+    }
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         val mySysTheme =
@@ -31,35 +56,21 @@ class More : AppCompatActivity() {
         recreate()
     }
 
-    protected fun setStatusBar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) { //5.0及以上
-            val decorView: View = window.decorView
-            val option: Int = (View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    or View.SYSTEM_UI_FLAG_LAYOUT_STABLE)
-            decorView.setSystemUiVisibility(option)
-            //根据上面设置是否对状态栏单独设置颜色
-            if (useThemestatusBarColor) {
-                window.statusBarColor = resources.getColor(android.R.color.background_light) //设置状态栏背景色
-            } else {
-                window.statusBarColor = Color.TRANSPARENT //透明
-            }
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) { //4.4到5.0
-            val localLayoutParams = window.attributes
-            localLayoutParams.flags =
-                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS or localLayoutParams.flags
-        } else {
-            Toast.makeText(this, "低于4.4的android系统版本不存在沉浸式状态栏", Toast.LENGTH_SHORT).show()
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && useStatusBarColor) { //android6.0以后可以对状态栏文字颜色和图标进行修改
-            window.decorView.systemUiVisibility =
-                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-        }
-    }
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
+        if (lacksPermissions(this,mPermissions)){
+            requestPermissions(mPermissions,1)
+        }
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_more)
+        val layout : ConstraintLayout = findViewById(R.id.shouye)
+        val wallpaperManager: WallpaperManager = WallpaperManager.getInstance(this)
 
-        setStatusBar()
+        val wallpaperDrawable: Drawable = wallpaperManager.drawable
+        val bd = wallpaperDrawable as BitmapDrawable
+        val bm = bd.bitmap
+        val drawable: Drawable =  BitmapDrawable(resources,Tools.blurBitmap(this,bm,12F))
+        layout.background = drawable
         jinzhi.setOnClickListener {
             val intant = Intent(this, JinZhi::class.java)
             startActivity(intant)
@@ -72,4 +83,5 @@ class More : AppCompatActivity() {
 
 
     }
+
 }

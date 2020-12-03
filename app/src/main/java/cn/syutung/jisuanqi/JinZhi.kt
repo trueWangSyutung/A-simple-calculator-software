@@ -1,9 +1,12 @@
 package cn.syutung.jisuanqi
 
 import android.app.Service
+import android.app.WallpaperManager
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,9 +15,12 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.view.WindowManager
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
-import com.example.myapplication.R
+import androidx.constraintlayout.widget.ConstraintLayout
 import kotlinx.android.synthetic.main.activity_jin_zhi.*
 import kotlinx.android.synthetic.main.activity_jin_zhi.about3
 import kotlinx.android.synthetic.main.activity_jin_zhi.more3
@@ -23,30 +29,6 @@ import kotlinx.android.synthetic.main.activity_jin_zhi.more3
 class JinZhi : AppCompatActivity() {
     protected var useThemestatusBarColor = false
     protected var useStatusBarColor = true
-    protected fun setStatusBar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) { //5.0及以上
-            val decorView: View = window.decorView
-            val option: Int = (View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    or View.SYSTEM_UI_FLAG_LAYOUT_STABLE)
-            decorView.setSystemUiVisibility(option)
-            //根据上面设置是否对状态栏单独设置颜色
-            if (useThemestatusBarColor) {
-                window.statusBarColor = resources.getColor(android.R.color.background_light) //设置状态栏背景色
-            } else {
-                window.statusBarColor = Color.TRANSPARENT //透明
-            }
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) { //4.4到5.0
-            val localLayoutParams = window.attributes
-            localLayoutParams.flags =
-                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS or localLayoutParams.flags
-        } else {
-            Toast.makeText(this, "低于4.4的android系统版本不存在沉浸式状态栏", Toast.LENGTH_SHORT).show()
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && useStatusBarColor) { //android6.0以后可以对状态栏文字颜色和图标进行修改
-            window.decorView.systemUiVisibility =
-                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-        }
-    }
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         val mySysTheme =
@@ -66,13 +48,18 @@ class JinZhi : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jin_zhi)
+        val layout : RelativeLayout = findViewById(R.id.jinzhi)
+        val wallpaperManager: WallpaperManager = WallpaperManager.getInstance(this)
+
+        val wallpaperDrawable: Drawable = wallpaperManager.drawable
+        val bd = wallpaperDrawable as BitmapDrawable
+        val bm = bd.bitmap
+        val drawable: Drawable = BitmapDrawable(resources,Tools.blurBitmap(this,bm,12F))
+        layout.background = drawable
 
 
-        setStatusBar()
-        val vibrator = getSystemService(Service.VIBRATOR_SERVICE) as Vibrator
-        val madas = longArrayOf(10,30)
         qingkong.setOnClickListener {
-            vibrator.vibrate(madas, -1)
+            
 
             shijinzhi.setText("")
             bajinzhi.setText("")
@@ -149,7 +136,7 @@ class JinZhi : AppCompatActivity() {
         })
 
         quren.setOnClickListener {
-            vibrator.vibrate(madas, -1)
+            
 
             val bajinzhi1 = bajinzhi.text.toString()
             val erjinzhi1 = erjinzhi.text.toString()
