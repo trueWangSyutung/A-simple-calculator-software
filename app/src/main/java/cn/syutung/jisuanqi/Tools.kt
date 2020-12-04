@@ -3,14 +3,17 @@ package cn.syutung.jisuanqi
 import android.annotation.TargetApi
 import android.app.WallpaperManager
 import android.content.Context
+import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
 import android.os.Build
 import android.renderscript.Allocation
 import android.renderscript.Element
 import android.renderscript.RenderScript
 import android.renderscript.ScriptIntrinsicBlur
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.palette.graphics.Palette
 import kotlinx.android.synthetic.main.activity_jin_zhi.view.*
@@ -18,6 +21,7 @@ import kotlinx.android.synthetic.main.activity_jin_zhi.view.*
 object Tools {
     // 图片缩放比例(即模糊度)
     private const val BITMAP_SCALE = 0.4f
+
 
 
     /**

@@ -1,7 +1,9 @@
 package cn.syutung.jisuanqi
 
+import android.annotation.SuppressLint
 import android.app.Service
 import android.app.WallpaperManager
+import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
@@ -43,20 +45,27 @@ class JinZhi : AppCompatActivity() {
         }
         recreate()
     }
+    private fun layoutBackgroundBlur(context: Context?, i : Int){
+        val layout : RelativeLayout =findViewById<RelativeLayout>(i)
+        val wallpaperManager: WallpaperManager = WallpaperManager.getInstance(context)
+        val wallpaperDrawable: Drawable = wallpaperManager.drawable
+        val bd = wallpaperDrawable as BitmapDrawable
+        val bm = bd.bitmap
+        val drawable: Drawable =   BitmapDrawable(resources, Tools.blurBitmap(context, bm, 12F))
+        layout.background = drawable
+    }
 
+
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jin_zhi)
-        val layout : RelativeLayout = findViewById(R.id.jinzhi)
-        val wallpaperManager: WallpaperManager = WallpaperManager.getInstance(this)
-
-        val wallpaperDrawable: Drawable = wallpaperManager.drawable
-        val bd = wallpaperDrawable as BitmapDrawable
-        val bm = bd.bitmap
-        val drawable: Drawable = BitmapDrawable(resources,Tools.blurBitmap(this,bm,12F))
-        layout.background = drawable
-
+        layoutBackgroundBlur(this,R.id.jinzhi)
+        if (Build.VERSION.SDK_INT>=21){
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
+        }
 
         qingkong.setOnClickListener {
             

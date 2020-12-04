@@ -1,6 +1,7 @@
 package cn.syutung.jisuanqi
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.WallpaperManager
 import android.content.Context
 import android.content.Intent
@@ -10,6 +11,7 @@ import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +28,7 @@ class More : AppCompatActivity() {
     private val mPermissions = arrayOf<String>(
         Manifest.permission.READ_EXTERNAL_STORAGE
     )
+
     private fun lacksPermission(mContexts: Context, permission: String): Boolean {
         return ContextCompat.checkSelfPermission(mContexts, permission) ==
                 PackageManager.PERMISSION_DENIED
@@ -40,6 +43,15 @@ class More : AppCompatActivity() {
             }
         }
         return false
+    }
+    fun layoutBackgroundBlur(context: Context?, i : Int){
+        val layout : ConstraintLayout =findViewById<ConstraintLayout>(i)
+        val wallpaperManager: WallpaperManager = WallpaperManager.getInstance(context)
+        val wallpaperDrawable: Drawable = wallpaperManager.drawable
+        val bd = wallpaperDrawable as BitmapDrawable
+        val bm = bd.bitmap
+        val drawable: Drawable =   BitmapDrawable(resources, Tools.blurBitmap(context, bm, 12F))
+        layout.background = drawable
     }
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
@@ -56,6 +68,7 @@ class More : AppCompatActivity() {
         recreate()
     }
 
+    @SuppressLint("ResourceAsColor")
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         if (lacksPermissions(this,mPermissions)){
@@ -63,14 +76,11 @@ class More : AppCompatActivity() {
         }
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_more)
-        val layout : ConstraintLayout = findViewById(R.id.shouye)
-        val wallpaperManager: WallpaperManager = WallpaperManager.getInstance(this)
-
-        val wallpaperDrawable: Drawable = wallpaperManager.drawable
-        val bd = wallpaperDrawable as BitmapDrawable
-        val bm = bd.bitmap
-        val drawable: Drawable =  BitmapDrawable(resources,Tools.blurBitmap(this,bm,12F))
-        layout.background = drawable
+        layoutBackgroundBlur(this,R.id.shouye)
+        if (Build.VERSION.SDK_INT>=21){
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
+        }
         jinzhi.setOnClickListener {
             val intant = Intent(this, JinZhi::class.java)
             startActivity(intant)

@@ -2,6 +2,7 @@ package cn.syutung.jisuanqi
 
 
 import android.R.attr.bitmap
+import android.annotation.SuppressLint
 import android.app.Service
 import android.app.WallpaperManager
 import android.content.ClipData
@@ -9,6 +10,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
+import android.content.res.Resources
 import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
@@ -19,6 +21,7 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -34,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this,sss,Toast.LENGTH_SHORT).show()
     }
 
-    fun copyToClipboard(info: String) {
+    private fun copyToClipboard(info: String) {
         val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         val clipData = ClipData.newPlainText(info,info)
         clipboardManager.setPrimaryClip(clipData)
@@ -56,19 +59,27 @@ class MainActivity : AppCompatActivity() {
         recreate()
     }
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val layout : ConstraintLayout = findViewById(R.id.mainlayout)
-        val wallpaperManager: WallpaperManager = WallpaperManager.getInstance(this)
-
+    private fun layoutBackgroundBlur(context: Context?, i : Int){
+        val layout : ConstraintLayout =findViewById<ConstraintLayout>(i)
+        val wallpaperManager: WallpaperManager = WallpaperManager.getInstance(context)
         val wallpaperDrawable: Drawable = wallpaperManager.drawable
         val bd = wallpaperDrawable as BitmapDrawable
         val bm = bd.bitmap
-        val drawable: Drawable =   BitmapDrawable(resources,Tools.blurBitmap(this,bm,12F))
-
+        val drawable: Drawable =   BitmapDrawable(resources, Tools.blurBitmap(context, bm, 12F))
         layout.background = drawable
+    }
+
+    @SuppressLint("ResourceAsColor")
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        layoutBackgroundBlur(this,R.id.mainlayout)
+
+        if (Build.VERSION.SDK_INT>=21){
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
+        }
 
         var numxiao1=0.0
         var numxiao2=0.0

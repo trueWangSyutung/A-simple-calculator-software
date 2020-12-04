@@ -12,13 +12,13 @@
 
         <activity
             android:name="cn.syutung.jisuanqi.YinsixieyiActivity"
-            android:screenOrientation="user" />
+            android:screenOrientation="portrait" />
         <activity
             android:name="cn.syutung.jisuanqi.JinZhi"
-            android:screenOrientation="user" />
+            android:screenOrientation="portrait" />
         <activity
             android:name="cn.syutung.jisuanqi.More"
-            android:screenOrientation="user">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,10 +26,10 @@
         </activity>
         <activity
             android:name="cn.syutung.jisuanqi.About"
-            android:screenOrientation="user" />
+            android:screenOrientation="portrait" />
         <activity
             android:name="cn.syutung.jisuanqi.MainActivity"
-            android:screenOrientation="user">
+            android:screenOrientation="portrait">
 
         </activity>
     </application>

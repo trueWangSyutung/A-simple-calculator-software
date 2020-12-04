@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "cn.syutung.jisuanqi"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "4.4.0(bulid in 2020.12.03)"
